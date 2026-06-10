@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shawn Castillo — Product and UX Designer. A portfolio built as a design system.">
+  <title>shawncastillo.com — shawncastillo.com</title>
+  <script src="/assets/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=DM+Serif+Display:ital@1&family=Overpass:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+  <div class="mode-bar">
+    <span class="mode-bar__label">Dark mode</span>
+    <div class="mode-toggle" role="switch" aria-label="Toggle dark/light mode"></div>
+  </div>
+
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">shawncastillo.com — v3.2</a>
+    <ul class="nav-links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/" class="active">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+    </ul>
+    <div class="nav-divider"></div>
+    <a href="/foundations/" class="nav-foundations">Foundations</a>
+    <div class="nav-spacer"></div>
+    <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-drawer">
+    <a href="/source/">Source</a>
+    <a href="/components/">Components</a>
+    <a href="/patterns/">Patterns</a>
+    <a href="/lab/" class="active">Lab</a>
+    <a href="/changelog/">Changelog</a>
+    <a href="/foundations/">Foundations</a>
+  </div>
+
+  <div class="case-hero">
+    <div>
+      <div class="breadcrumb" style="margin-bottom: var(--space-md)"><a href="/lab/">Lab</a> / Meta</div>
+      <h1 class="case-study-title" style="margin-bottom: var(--space-md)">shawncastillo.com</h1>
+      <div class="case-hero__lede">A design system built for one product — me. The system documents itself as it grows.</div>
+      <div class="case-hero__props">
+        <span class="case-hero__prop"><strong>Type</strong> Meta / This site</span>
+        <span class="pill pill-accent">Live</span>
+      </div>
+    </div>
+    <div class="case-hero__stack">
+      <div class="case-hero__stack-label">Stack</div>
+      <div class="case-hero__stack-items">
+        <div class="case-hero__stack-item">Design tokens</div>
+        <div class="case-hero__stack-item">Barlow Condensed</div>
+        <div class="case-hero__stack-item">Overpass</div>
+        <div class="case-hero__stack-item">DM Serif Display</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="overview">Overview</button>
+    <button class="tab" data-tab="foundations">Foundations</button>
+  </div>
+
+  <div class="tab-panel active" data-panel="overview">
+    <div class="overview-grid">
+      <div class="overview-cell">
+        <div class="overview-cell__label">What this is</div>
+        <div class="overview-cell__body">This site is a design system. Not a portfolio that talks about design systems — one that <strong style="color:var(--color-text-primary)">functions as one.</strong> Every element is a named, intentional component. The UI and the documentation are the same thing.</div>
+      </div>
+      <div class="overview-cell">
+        <div class="overview-cell__label">Why it exists</div>
+        <div class="overview-cell__body">Most portfolios show outputs. This one shows thinking. A designer who builds themselves a design system is saying something without saying it — <strong style="color:var(--color-text-primary)">this is how I work, not just what I've made.</strong></div>
+      </div>
+      <div class="overview-cell">
+        <div class="overview-cell__label">Hidden features</div>
+        <div class="overview-cell__body">The site has two hidden interaction layers — a <strong style="color:var(--color-text-primary)">token toggle</strong> in the nav that reveals the DS layer underneath the UI with token labels on every element, and an <strong style="color:var(--color-text-primary)">accent color switcher</strong> inside the token panel that cascades a color change across the entire system in real time. Find them if you can.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel" data-panel="foundations">
+    <div style="padding: var(--space-xl)">
+
+      <!-- Color -->
+      <div style="margin-bottom: var(--space-2xl)">
+        <h2 class="section-title" style="margin-bottom: var(--space-xs)">Color</h2>
+        <p style="font-size: 12px; color: var(--color-text-tertiary); margin-bottom: var(--space-lg)">A cool, restrained palette. One accent that does the heavy lifting — everything else supports it.</p>
+        <table class="token-table">
+          <thead><tr><th>Token</th><th class="token-table__demo">Demo</th><th>Value</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td class="token-table__name">--color-accent</td><td><div class="token-table__swatch" style="background:var(--color-accent)"></div></td><td class="token-table__value">#00e5cc</td><td class="token-table__usage">CTAs, active states, highlights</td></tr>
+            <tr><td class="token-table__name">--color-surface</td><td><div class="token-table__swatch" style="background:var(--color-surface)"></div></td><td class="token-table__value">#0e1318</td><td class="token-table__usage">Page background</td></tr>
+            <tr><td class="token-table__name">--color-surface-secondary</td><td><div class="token-table__swatch" style="background:var(--color-surface-secondary)"></div></td><td class="token-table__value">#161d24</td><td class="token-table__usage">Panels, sidebars</td></tr>
+            <tr><td class="token-table__name">--color-surface-elevated</td><td><div class="token-table__swatch" style="background:var(--color-surface-elevated)"></div></td><td class="token-table__value">#1a2330</td><td class="token-table__usage">Cards, modals</td></tr>
+            <tr><td class="token-table__name">--color-text-primary</td><td><div class="token-table__swatch" style="background:var(--color-text-primary)"></div></td><td class="token-table__value">#e0f0fa</td><td class="token-table__usage">Headings, body copy</td></tr>
+            <tr><td class="token-table__name">--color-text-secondary</td><td><div class="token-table__swatch" style="background:var(--color-text-secondary)"></div></td><td class="token-table__value">#7a9bb5</td><td class="token-table__usage">Supporting text</td></tr>
+            <tr><td class="token-table__name">--color-text-tertiary</td><td><div class="token-table__swatch" style="background:var(--color-text-tertiary)"></div></td><td class="token-table__value">#3d5870</td><td class="token-table__usage">Labels, captions</td></tr>
+            <tr><td class="token-table__name">--color-border</td><td><div class="token-table__swatch" style="background:var(--color-border)"></div></td><td class="token-table__value">#1e2d3d</td><td class="token-table__usage">Dividers, borders</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Typography -->
+      <div style="margin-bottom: var(--space-2xl)">
+        <h2 class="section-title" style="margin-bottom: var(--space-xs)">Typography</h2>
+        <p style="font-size: 12px; color: var(--color-text-tertiary); margin-bottom: var(--space-lg)">Three typefaces, three jobs. Barlow makes the statement. Overpass does the work. DM Serif adds the human touch.</p>
+        <table class="token-table">
+          <thead><tr><th>Token</th><th>Demo</th><th>Value</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td class="token-table__name">--font-display</td><td style="font-family:var(--font-display);font-weight:800;font-size:16px">Aa</td><td class="token-table__value">Barlow Condensed 800</td><td class="token-table__usage">H1, section titles</td></tr>
+            <tr><td class="token-table__name">--font-heading</td><td style="font-family:var(--font-heading);font-weight:600;font-size:14px">Aa</td><td class="token-table__value">Overpass 600</td><td class="token-table__usage">Subheadings, card titles</td></tr>
+            <tr><td class="token-table__name">--font-editorial</td><td style="font-family:var(--font-editorial);font-style:italic;font-size:14px">Aa</td><td class="token-table__value">DM Serif Display italic</td><td class="token-table__usage">Quotes, lede text</td></tr>
+            <tr><td class="token-table__name">--font-body</td><td style="font-family:var(--font-body);font-size:13px">Aa</td><td class="token-table__value">Overpass 400</td><td class="token-table__usage">Body copy, UI text</td></tr>
+            <tr><td class="token-table__name">--font-mono</td><td style="font-family:var(--font-mono);font-size:12px">Aa</td><td class="token-table__value">ui-monospace</td><td class="token-table__usage">Labels, tokens, code</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Spacing -->
+      <div style="margin-bottom: var(--space-2xl)">
+        <h2 class="section-title" style="margin-bottom: var(--space-xs)">Spacing</h2>
+        <p style="font-size: 12px; color: var(--color-text-tertiary); margin-bottom: var(--space-lg)">Built on an 8pt grid. Generous by design — whitespace is not wasted space, it's part of the system.</p>
+        <table class="token-table">
+          <thead><tr><th>Token</th><th class="token-table__demo">Demo</th><th>Value</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td class="token-table__name">--space-xs</td><td><div class="spacing-demo" style="width:4px"></div></td><td class="token-table__value">4px</td><td class="token-table__usage">Tight gaps</td></tr>
+            <tr><td class="token-table__name">--space-sm</td><td><div class="spacing-demo" style="width:8px"></div></td><td class="token-table__value">8px</td><td class="token-table__usage">Small gaps, pill padding</td></tr>
+            <tr><td class="token-table__name">--space-md</td><td><div class="spacing-demo" style="width:16px"></div></td><td class="token-table__value">16px</td><td class="token-table__usage">Component internal spacing</td></tr>
+            <tr><td class="token-table__name">--space-lg</td><td><div class="spacing-demo" style="width:24px"></div></td><td class="token-table__value">24px</td><td class="token-table__usage">Section padding, card body</td></tr>
+            <tr><td class="token-table__name">--space-xl</td><td><div class="spacing-demo" style="width:40px"></div></td><td class="token-table__value">40px</td><td class="token-table__usage">Section margins, page padding</td></tr>
+            <tr><td class="token-table__name">--space-2xl</td><td><div class="spacing-demo" style="width:64px"></div></td><td class="token-table__value">64px</td><td class="token-table__usage">Hero padding, major sections</td></tr>
+            <tr><td class="token-table__name">--space-3xl</td><td><div class="spacing-demo" style="width:96px"></div></td><td class="token-table__value">96px</td><td class="token-table__usage">Page-level vertical rhythm</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Border Radius -->
+      <div style="margin-bottom: var(--space-2xl)">
+        <h2 class="section-title" style="margin-bottom: var(--space-xs)">Border Radius</h2>
+        <p style="font-size: 12px; color: var(--color-text-tertiary); margin-bottom: var(--space-lg)">Subtle softness across the system. Not sharp enough to feel clinical, not round enough to feel playful.</p>
+        <table class="token-table">
+          <thead><tr><th>Token</th><th class="token-table__demo">Demo</th><th>Value</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td class="token-table__name">--radius-sm</td><td><div style="width:20px;height:20px;background:var(--color-accent);opacity:0.4;border-radius:4px"></div></td><td class="token-table__value">4px</td><td class="token-table__usage">Inputs, code blocks</td></tr>
+            <tr><td class="token-table__name">--radius-md</td><td><div style="width:20px;height:20px;background:var(--color-accent);opacity:0.4;border-radius:8px"></div></td><td class="token-table__value">8px</td><td class="token-table__usage">Buttons, impact cards</td></tr>
+            <tr><td class="token-table__name">--radius-lg</td><td><div style="width:20px;height:20px;background:var(--color-accent);opacity:0.4;border-radius:12px"></div></td><td class="token-table__value">12px</td><td class="token-table__usage">Cards, panels, token panel</td></tr>
+            <tr><td class="token-table__name">--radius-full</td><td><div style="width:20px;height:20px;background:var(--color-accent);opacity:0.4;border-radius:99px"></div></td><td class="token-table__value">99px</td><td class="token-table__usage">Pills, badges, toggles</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Motion -->
+      <div>
+        <h2 class="section-title" style="margin-bottom: var(--space-xs)">Motion</h2>
+        <p style="font-size: 12px; color: var(--color-text-tertiary); margin-bottom: var(--space-lg)">Elastic by default. The spring easing is the primary curve — interactions should feel like they have a little life in them.</p>
+        <table class="token-table">
+          <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td class="token-table__name">--ease-spring</td><td class="token-table__value" style="font-size:10px">cubic-bezier(0.34, 1.56, 0.64, 1)</td><td class="token-table__usage">Card hover, toggle, primary interactions</td></tr>
+            <tr><td class="token-table__name">--ease-out</td><td class="token-table__value" style="font-size:10px">cubic-bezier(0.16, 1, 0.3, 1)</td><td class="token-table__usage">Photo scale, entrance animations</td></tr>
+            <tr><td class="token-table__name">--ease-subtle</td><td class="token-table__value" style="font-size:10px">cubic-bezier(0.4, 0, 0.2, 1)</td><td class="token-table__usage">Color transitions, opacity fades</td></tr>
+            <tr><td class="token-table__name">--duration-fast</td><td class="token-table__value">150ms</td><td class="token-table__usage">Hover states, color changes</td></tr>
+            <tr><td class="token-table__name">--duration-base</td><td class="token-table__value">300ms</td><td class="token-table__usage">Card lift, panel transitions</td></tr>
+            <tr><td class="token-table__name">--duration-slow</td><td class="token-table__value">500ms</td><td class="token-table__usage">Photo scale, page-level motion</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="next-bar" style="justify-content: flex-start">
+    <a href="/lab/" class="next-bar__link">← Back to Lab</a>
+  </div>
+
+  <footer class="site-footer container">
+    <span class="site-footer__logo">shawncastillo.com — v3.2</span>
+    <ul class="site-footer__links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+      <li><a href="/foundations/">Foundations</a></li>
+    </ul>
+  </footer>
+
+  <script src="/assets/js/gate.js"></script>
+</body>
+</html>

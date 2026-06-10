@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shawn Castillo — Product and UX Designer. A portfolio built as a design system.">
+  <title>Components — shawncastillo.com</title>
+  <script src="/assets/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=DM+Serif+Display:ital@1&family=Overpass:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <style>
+    .components-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      padding-bottom: var(--space-3xl);
+    }
+    @media (max-width: 767px) { .components-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="mode-bar">
+    <span class="mode-bar__label">Dark mode</span>
+    <div class="mode-toggle" role="switch" aria-label="Toggle dark/light mode"></div>
+  </div>
+
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">shawncastillo.com — v3.2</a>
+    <ul class="nav-links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/" class="active">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+    </ul>
+    <div class="nav-divider"></div>
+    <a href="/foundations/" class="nav-foundations">Foundations</a>
+    <div class="nav-spacer"></div>
+    <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-drawer">
+    <a href="/source/">Source</a>
+    <a href="/components/" class="active">Components</a>
+    <a href="/patterns/">Patterns</a>
+    <a href="/lab/">Lab</a>
+    <a href="/changelog/">Changelog</a>
+    <a href="/foundations/">Foundations</a>
+  </div>
+
+  <div class="page-hero">
+    <h1 class="display" style="font-size: clamp(36px,5vw,52px); margin-bottom: var(--space-md)">The headline work.</h1>
+    <p style="font-size: 14px; color: var(--color-text-secondary); max-width: 560px; line-height: 1.75">Four projects. Real problems, real constraints, real outcomes. Browse the overview, request access to design artifacts, or read how the work actually moved.</p>
+  </div>
+
+  <div class="container">
+    <div class="components-grid">
+
+      <a href="/components/ods/" class="card">
+        <div class="card-preview preview-ods">
+          <span class="card-preview__abbr">ODS</span>
+          <span class="card-preview__badge pill pill-accent">Shipped</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Components / ISN</div>
+          <div class="card-title">Odyssey Design System</div>
+          <div class="card-lede">The team could finally build without rebuilding from scratch — which meant shipping features instead of starting over.</div>
+          <div class="card-footer">
+            <span class="pill pill-accent">Shipped</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/components/mct/" class="card">
+        <div class="card-preview preview-mct">
+          <span class="card-preview__abbr">MCT</span>
+          <span class="card-preview__badge pill pill-accent">Shipped</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Components / ISN</div>
+          <div class="card-title">My Company Training</div>
+          <div class="card-lede">Contractor admins could finally manage their entire training program without leaving the platform.</div>
+          <div class="card-footer">
+            <span class="pill pill-accent">Shipped</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/components/wrk/" class="card">
+        <div class="card-preview preview-wrk">
+          <span class="card-preview__abbr">WRK</span>
+          <span class="card-preview__badge pill pill-accent">Shipped</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Components / ISN</div>
+          <div class="card-title">Worker Readiness &amp; Knowledge</div>
+          <div class="card-lede">Workers show up compliant. Nobody gets turned away at the gate.</div>
+          <div class="card-footer">
+            <span class="pill pill-accent">Shipped</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/components/billing/" class="card">
+        <div class="card-preview preview-billing">
+          <span class="card-preview__abbr">Bill</span>
+          <span class="card-preview__badge pill pill-accent">Shipped</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Components / ISN</div>
+          <div class="card-title">Billing Portal Redesign</div>
+          <div class="card-lede">Users could finally pay their invoices from any device — which meant instead of hundreds of support calls a month, the team could focus on work that actually needed them.</div>
+          <div class="card-footer">
+            <span class="pill pill-accent">Shipped</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/components/contractor-license/" class="card">
+        <div class="card-preview preview-contractor">
+          <span class="card-preview__abbr">CL</span>
+          <span class="card-preview__badge pill pill-accent">Shipped</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Components / ISN</div>
+          <div class="card-title">Contractor License Management</div>
+          <div class="card-lede">Contractor admins could submit license details and required documentation with less guesswork — while reviewers had a clearer path from submission to approval or revisions.</div>
+          <div class="card-footer">
+            <span class="pill pill-accent">Shipped</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/components/training-compliance/" class="card">
+        <div class="card-preview preview-compliance">
+          <span class="card-preview__abbr">TC</span>
+          <span class="card-preview__badge pill pill-accent">Shipped</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Components / ISN</div>
+          <div class="card-title">Training Compliance Report</div>
+          <div class="card-lede">Operators could finally see exactly where their workforce stood on training requirements — filtered, exportable, and actionable without a support ticket.</div>
+          <div class="card-footer">
+            <span class="pill pill-accent">Shipped</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/components/in-app-landing/" class="card">
+        <div class="card-preview preview-inapp">
+          <span class="card-preview__abbr">HC</span>
+          <span class="card-preview__badge pill pill-accent">Shipped</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Components / ISN</div>
+          <div class="card-title">In-App Landing Page</div>
+          <div class="card-lede">Hiring clients land somewhere that actually orients them — so the first thing they see is a clear starting point for the work they came to do.</div>
+          <div class="card-footer">
+            <span class="pill pill-accent">Shipped</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/components/publish-trainings/" class="card">
+        <div class="card-preview preview-publish">
+          <span class="card-preview__abbr">PT</span>
+          <span class="card-preview__badge pill pill-accent">Shipped</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Components / ISN</div>
+          <div class="card-title">Publish Trainings</div>
+          <div class="card-lede">Admins could assign training requirements by employee — and schedule future publishes — without losing track of what was already live.</div>
+          <div class="card-footer">
+            <span class="pill pill-accent">Shipped</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <footer class="site-footer container">
+    <span class="site-footer__logo">shawncastillo.com — v3.2</span>
+    <ul class="site-footer__links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+      <li><a href="/foundations/">Foundations</a></li>
+    </ul>
+  </footer>
+
+  <script src="/assets/js/gate.js"></script>
+</body>
+</html>

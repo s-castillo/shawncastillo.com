@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shawn Castillo — Product and UX Designer. A portfolio built as a design system.">
+  <title>Odyssey Design System — shawncastillo.com</title>
+  <script src="/assets/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=DM+Serif+Display:ital@1&family=Overpass:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+  <div class="mode-bar">
+    <span class="mode-bar__label">Dark mode</span>
+    <div class="mode-toggle" role="switch" aria-label="Toggle dark/light mode"></div>
+  </div>
+
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">shawncastillo.com — v3.2</a>
+    <ul class="nav-links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/" class="active">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+    </ul>
+    <div class="nav-divider"></div>
+    <a href="/foundations/" class="nav-foundations">Foundations</a>
+    <div class="nav-spacer"></div>
+    <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-drawer">
+    <a href="/source/">Source</a>
+    <a href="/components/" class="active">Components</a>
+    <a href="/patterns/">Patterns</a>
+    <a href="/lab/">Lab</a>
+    <a href="/changelog/">Changelog</a>
+    <a href="/foundations/">Foundations</a>
+  </div>
+
+  <!-- Case study hero -->
+  <div class="case-hero">
+    <div>
+      <div class="breadcrumb" style="margin-bottom: var(--space-md)"><a href="/components/">Components</a> / ISN</div>
+      <h1 class="case-study-title" style="margin-bottom: var(--space-md)">Odyssey Design System</h1>
+      <div class="case-hero__lede">The team could finally build without rebuilding from scratch — which meant shipping features instead of starting over.</div>
+      <div class="case-hero__props">
+        <span class="case-hero__prop"><strong>Role</strong> Product Designer</span>
+        <span class="case-hero__prop"><strong>Company</strong> ISN</span>
+        <span class="pill pill-accent">Shipped</span>
+      </div>
+    </div>
+    <div class="case-hero__stack">
+      <div class="case-hero__stack-label">Stack</div>
+      <div class="case-hero__stack-items">
+        <div class="case-hero__stack-item">Figma</div>
+        <div class="case-hero__stack-item">WCAG standards</div>
+        <div class="case-hero__stack-item">Component documentation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" data-tab="overview">Overview</button>
+    <button class="tab" data-tab="design">Design</button>
+    <button class="tab" data-tab="process">Process</button>
+  </div>
+
+  <!-- Overview tab -->
+  <div class="tab-panel active" data-panel="overview">
+    <div class="overview-grid">
+      <div class="overview-cell">
+        <div class="overview-cell__label">Problem</div>
+        <div class="overview-cell__body">No shared component library existed. Every team was building the same patterns from scratch — inconsistently, and repeatedly. The product looked different depending on who built it.</div>
+      </div>
+      <div class="overview-cell">
+        <div class="overview-cell__label">Intervention</div>
+        <div class="overview-cell__body">Audited the existing product, defined a token system, and built a documented component library in Figma. Set WCAG AA as the minimum bar. Shipped a working foundation rather than waiting for a perfect one.</div>
+      </div>
+      <div class="overview-cell">
+        <div class="overview-cell__label">Outcome</div>
+        <div class="overview-cell__body">Teams adopted the system. Feature velocity increased. Designers and engineers shared a common language for the first time — and the product started to look like it came from the same place.</div>
+      </div>
+    </div>
+    <div class="impact-bar">
+      <div class="impact-bar__label">Impact</div>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-card__value">Faster</div>
+          <div class="impact-card__desc">Feature delivery — teams stopped rebuilding existing patterns</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-card__value">WCAG</div>
+          <div class="impact-card__desc">AA compliance baseline set across all new components</div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-card__value">One source</div>
+          <div class="impact-card__desc">Single component library adopted across design and engineering</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design tab — OPEN -->
+  <div class="tab-panel" data-panel="design">
+    <div class="info-note" style="margin: var(--space-xl) var(--space-xl) 0">Design artifacts for this project are publicly available.</div>
+    <div class="screenshot-grid">
+      <div class="screenshot-item">
+        <img src="/assets/images/case-studies/ods/ODS-Component-Setup-Button.png" alt="Component properties — Button component setup">
+      </div>
+      <div class="screenshot-item">
+        <img src="/assets/images/case-studies/ods/ODS-Component-Setup-Dropdown.png" alt="Token structure — Dropdown component setup">
+      </div>
+      <div class="screenshot-item full-width">
+        <img src="/assets/images/case-studies/ods/ODS-Component-Setup-Text-Input.png" alt="Component library overview — Text input component setup">
+      </div>
+    </div>
+  </div>
+
+  <!-- Process tab -->
+  <div class="tab-panel" data-panel="process">
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-step__num">01 / Audit</div>
+        <div>
+          <div class="process-step__title">Audit</div>
+          <div class="process-step__body">Catalogued every UI pattern in the existing product. Identified redundancy, inconsistency, and gaps. The audit made the problem visible — and quantifiable — to stakeholders who hadn't seen it that way before.</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num">02 / Define</div>
+        <div>
+          <div class="process-step__title">Define</div>
+          <div class="process-step__body">Defined the token layer first — color, type, spacing, radius, motion. Everything downstream depended on getting this right. Components were built on top of tokens, not the other way around.</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num">03 / Constraint</div>
+        <div>
+          <div class="process-step__title">Constraint</div>
+          <div class="process-step__body">The temptation was to wait until every component was perfect before shipping anything. The real constraint was time and adoption — a perfect system no one uses is worth nothing.</div>
+          <div class="process-note">"Ship a working foundation over waiting for a perfect one"</div>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num">04 / Ship &amp; Watch</div>
+        <div>
+          <div class="process-step__title">Ship &amp; Watch</div>
+          <div class="process-step__body">Released the foundation and monitored adoption. Iterated based on real usage — what components teams actually reached for, where gaps appeared, and what documentation needed to be clearer.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Next bar -->
+  <div class="next-bar">
+    <a href="/components/mct/" class="next-bar__link">Next: My Company Training →</a>
+  </div>
+
+  <footer class="site-footer container">
+    <span class="site-footer__logo">shawncastillo.com — v3.2</span>
+    <ul class="site-footer__links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+      <li><a href="/foundations/">Foundations</a></li>
+    </ul>
+  </footer>
+
+  <script src="/assets/js/gate.js"></script>
+</body>
+</html>

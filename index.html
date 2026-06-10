@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shawn Castillo — Product and UX Designer. A portfolio built as a design system.">
+  <meta property="og:title" content="Shawn Castillo — Product & UX Designer">
+  <meta property="og:description" content="A design system built for one product. Me.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shawncastillo.com">
+  <title>Shawn Castillo — Product & UX Designer</title>
+  <script src="/assets/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=DM+Serif+Display:ital@1&family=Overpass:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <style>
+    /* Landing-specific */
+    .landing-hero {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: var(--space-2xl);
+      padding: var(--space-2xl) var(--space-xl);
+      max-width: 1100px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary);
+      border: 0.5px solid var(--color-border);
+      border-radius: var(--radius-full);
+      padding: 4px 12px;
+      width: fit-content;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.75;
+      max-width: 480px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: var(--space-lg);
+    }
+
+    .section-link {
+      font-size: 12px;
+      color: var(--color-accent);
+      transition: opacity var(--duration-fast) var(--ease-subtle);
+    }
+
+    .section-link:hover { opacity: 0.75; }
+
+    .card-grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+    }
+
+    .card-grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-md);
+    }
+
+    .source-excerpt {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      align-items: center;
+    }
+
+    .source-excerpt__quote {
+      font-family: var(--font-editorial);
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--color-text-primary);
+    }
+
+    .source-excerpt__body {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+
+    .source-excerpt__link {
+      display: inline-block;
+      margin-top: var(--space-lg);
+      font-size: 13px;
+      color: var(--color-accent);
+    }
+
+    @media (max-width: 767px) {
+      .landing-hero {
+        grid-template-columns: 1fr;
+        padding: var(--space-xl) var(--space-md);
+      }
+
+      .card-grid-2x2 {
+        grid-template-columns: 1fr;
+      }
+
+      .card-grid-4col {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .source-excerpt {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .landing-hero {
+        grid-template-columns: 1fr 280px;
+      }
+
+      .card-grid-4col {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mode bar -->
+  <div class="mode-bar">
+    <span class="mode-bar__label">Dark mode</span>
+    <div class="mode-toggle" role="switch" aria-label="Toggle dark/light mode"></div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">shawncastillo.com — v3.2</a>
+    <ul class="nav-links">
+      <li><a href="/source/" >Source</a></li>
+      <li><a href="/components/" >Components</a></li>
+      <li><a href="/patterns/" >Patterns</a></li>
+      <li><a href="/lab/" >Lab</a></li>
+      <li><a href="/changelog/" >Changelog</a></li>
+    </ul>
+    <div class="nav-divider"></div>
+    <a href="/foundations/" class="nav-foundations">Foundations</a>
+    <div class="nav-divider"></div>
+    <button class="nav-token-toggle">tokens</button>
+    <div class="nav-spacer"></div>
+    <button class="nav-hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer">
+    <a href="/source/">Source</a>
+    <a href="/components/">Components</a>
+    <a href="/patterns/">Patterns</a>
+    <a href="/lab/">Lab</a>
+    <a href="/changelog/">Changelog</a>
+    <a href="/foundations/" class="nav-foundations">Foundations</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="landing-hero" id="landing-hero">
+    <div class="hero-left">
+      <div class="tok-outline" style="position:relative;display:inline-block">
+        <span class="tok-tag">badge · --font-mono · --color-border</span>
+        <span class="hero-badge">Product &amp; UX Designer</span>
+      </div>
+
+      <div class="tok-outline" style="position:relative">
+        <span class="tok-tag">h1 · --font-display · 800 · clamp(36px,6vw,64px)</span>
+        <h1 class="display">A design system built for one product. <span class="accent">Me.</span></h1>
+      </div>
+
+      <div class="tok-outline" style="position:relative">
+        <span class="tok-tag">body · --font-body · --color-text-secondary · 14px</span>
+        <p class="hero-sub">Scalable thinking, documented. Browse the components, read the source, see what's in the lab.</p>
+      </div>
+    </div>
+
+    <div class="tok-outline" style="position:relative">
+      <span class="tok-tag">token-panel · --color-surface-secondary · --radius-lg</span>
+      <div class="token-panel">
+        <div class="token-panel__header">
+          <span class="token-panel__label">Tokens</span>
+        </div>
+
+        <div class="token-row token-row--accent clickable" title="Click to cycle accent color">
+          <div class="token-swatch" id="accent-swatch" style="background: var(--color-accent)"></div>
+          <span class="token-name">--color-accent</span>
+          <span class="token-value" id="accent-value">#00e5cc</span>
+        </div>
+        <div class="token-row">
+          <div class="token-swatch" style="background: var(--color-surface)"></div>
+          <span class="token-name">--color-surface</span>
+          <span class="token-value">#0e1318</span>
+        </div>
+        <div class="token-row">
+          <div class="token-swatch" style="background: var(--color-surface-secondary)"></div>
+          <span class="token-name">--color-surface-secondary</span>
+          <span class="token-value">#161d24</span>
+        </div>
+        <div class="token-row">
+          <div class="token-swatch" style="background: var(--color-text-primary)"></div>
+          <span class="token-name">--color-text-primary</span>
+          <span class="token-value">#e0f0fa</span>
+        </div>
+        <div class="token-row">
+          <div class="token-swatch" style="background: var(--color-text-secondary)"></div>
+          <span class="token-name">--color-text-secondary</span>
+          <span class="token-value">#7a9bb5</span>
+        </div>
+        <div class="token-row">
+          <div class="token-swatch" style="background: var(--color-border)"></div>
+          <span class="token-name">--color-border</span>
+          <span class="token-value">#1e2d3d</span>
+        </div>
+        <div class="token-row">
+          <span class="token-name">--font-display</span>
+          <span class="token-value" style="font-family:var(--font-display);font-weight:800;font-size:11px">Barlow Condensed</span>
+        </div>
+        <div class="token-row">
+          <span class="token-name">--font-body</span>
+          <span class="token-value">Overpass</span>
+        </div>
+        <div class="token-row">
+          <span class="token-name">--space-xl</span>
+          <span class="token-value">40px</span>
+        </div>
+        <div class="token-row">
+          <span class="token-name">--radius-lg</span>
+          <span class="token-value">12px</span>
+        </div>
+        <div class="token-row">
+          <span class="token-name">--ease-spring</span>
+          <span class="token-value" style="font-size:9px">cubic-bezier(0.34,1.56,0.64,1)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stat strip -->
+  <div class="stat-strip">
+    <a href="/components/" class="stat-card">
+      <div class="stat-card__label">Components</div>
+      <div class="stat-card__desc">4 case studies, real constraints</div>
+    </a>
+    <a href="/patterns/" class="stat-card">
+      <div class="stat-card__label">Patterns</div>
+      <div class="stat-card__desc">Applied client work</div>
+    </a>
+    <a href="/lab/" class="stat-card">
+      <div class="stat-card__label">Lab</div>
+      <div class="stat-card__desc">3 experiments and counting</div>
+    </a>
+    <a href="/changelog/" class="stat-card">
+      <div class="stat-card__label">Changelog</div>
+      <div class="stat-card__desc">v1.0 → v3.2 — version history</div>
+    </a>
+  </div>
+
+  <!-- Sections -->
+  <div class="sections-wrapper">
+
+    <!-- Components -->
+    <div class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Components</h2>
+          <a href="/components/" class="section-link">View all →</a>
+        </div>
+        <div class="card-grid-2x2">
+          <a href="/components/ods/" class="card">
+            <div class="card-preview preview-ods">
+              <span class="card-preview__abbr">ODS</span>
+              <span class="card-preview__badge pill pill-accent">Shipped</span>
+            </div>
+            <div class="card-body">
+              <div class="card-breadcrumb">Components / ISN</div>
+              <div class="card-title">Odyssey Design System</div>
+              <div class="card-lede">The team could finally build without rebuilding from scratch.</div>
+              <div class="card-footer">
+                <span class="pill pill-accent">Shipped</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+          <a href="/components/mct/" class="card">
+            <div class="card-preview preview-mct">
+              <span class="card-preview__abbr">MCT</span>
+              <span class="card-preview__badge pill pill-accent">Shipped</span>
+            </div>
+            <div class="card-body">
+              <div class="card-breadcrumb">Components / ISN</div>
+              <div class="card-title">My Company Training</div>
+              <div class="card-lede">Contractor admins manage training without leaving the platform.</div>
+              <div class="card-footer">
+                <span class="pill pill-accent">Shipped</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+          <a href="/components/wrk/" class="card">
+            <div class="card-preview preview-wrk">
+              <span class="card-preview__abbr">WRK</span>
+              <span class="card-preview__badge pill pill-accent">Shipped</span>
+            </div>
+            <div class="card-body">
+              <div class="card-breadcrumb">Components / ISN</div>
+              <div class="card-title">Worker Readiness &amp; Knowledge</div>
+              <div class="card-lede">Workers show up compliant. Nobody gets turned away at the gate.</div>
+              <div class="card-footer">
+                <span class="pill pill-accent">Shipped</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+          <a href="/components/billing/" class="card">
+            <div class="card-preview preview-billing">
+              <span class="card-preview__abbr">Bill</span>
+              <span class="card-preview__badge pill pill-accent">Shipped</span>
+            </div>
+            <div class="card-body">
+              <div class="card-breadcrumb">Components / ISN</div>
+              <div class="card-title">Billing Portal Redesign</div>
+              <div class="card-lede">Users could finally pay their invoices from any device.</div>
+              <div class="card-footer">
+                <span class="pill pill-accent">Shipped</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Patterns -->
+    <div class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Patterns</h2>
+          <a href="/patterns/" class="section-link">View all →</a>
+        </div>
+        <div class="card-grid-2x2">
+          <a href="/patterns/hair-salon/" class="card">
+            <div class="card-preview preview-patterns">
+              <span class="card-preview__abbr">HS</span>
+              <span class="card-preview__badge pill pill-muted">In progress</span>
+            </div>
+            <div class="card-body">
+              <div class="card-breadcrumb">Patterns / Freelance</div>
+              <div class="card-title">Hair Salon Studio Website</div>
+              <div class="card-lede">Mobile-first website for a local salon with no digital footprint.</div>
+              <div class="card-footer">
+                <span class="pill pill-muted">In progress</span>
+                <span class="card-arrow">→</span>
+              </div>
+            </div>
+          </a>
+          <div class="card-placeholder">more patterns incoming</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab -->
+    <div class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Lab</h2>
+          <a href="/lab/" class="section-link">View all →</a>
+        </div>
+        <div class="card-grid-4col">
+          <a href="/lab/draft-data/" class="card-lab">
+            <div class="card-lab__tag">Lab / AI Tooling</div>
+            <div class="card-lab__title">Draft Data</div>
+            <div class="card-lab__desc">Needed a tool that didn't exist at the right price point. Built it.</div>
+            <span class="pill pill-muted">Figma Plugin</span>
+          </a>
+          <a href="/lab/pocketgardener/" class="card-lab">
+            <div class="card-lab__tag">Lab / Concept</div>
+            <div class="card-lab__title">PocketGardener</div>
+            <div class="card-lab__desc">AI-driven discovery to rapidly explore features and interaction patterns.</div>
+            <span class="pill pill-muted">Passion Project</span>
+          </a>
+          <a href="/lab/yn-ds/" class="card-lab">
+            <div class="card-lab__tag">Lab / Meta</div>
+            <div class="card-lab__title">shawncastillo.com</div>
+            <div class="card-lab__desc">This site. A design system built for one product — me.</div>
+            <span class="pill pill-accent">Live</span>
+          </a>
+          <div class="card-placeholder">more experiments incoming</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Source excerpt -->
+    <div class="section">
+      <div class="container">
+        <div class="source-excerpt">
+          <div class="source-excerpt__quote">"Good design should always be simple. Even if that takes longer."</div>
+          <div>
+            <p class="source-excerpt__body">A Product and UX Designer who aims to make products that are simple to use and look great. Modern and timeless by intention — not by accident.</p>
+            <a href="/source/" class="source-excerpt__link">Read the source →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer container">
+    <span class="site-footer__logo">shawncastillo.com — v3.2</span>
+    <ul class="site-footer__links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+      <li><a href="/foundations/">Foundations</a></li>
+    </ul>
+  </footer>
+
+  <script src="/assets/js/gate.js"></script>
+  <script src="/assets/js/token-toggle.js"></script>
+</body>
+</html>

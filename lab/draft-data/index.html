@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shawn Castillo — Product and UX Designer. A portfolio built as a design system.">
+  <title>Real Fake Data Generator — shawncastillo.com</title>
+  <script src="/assets/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=DM+Serif+Display:ital@1&family=Overpass:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+  <div class="mode-bar">
+    <span class="mode-bar__label">Dark mode</span>
+    <div class="mode-toggle" role="switch" aria-label="Toggle dark/light mode"></div>
+  </div>
+
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">shawncastillo.com — v3.2</a>
+    <ul class="nav-links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/" class="active">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+    </ul>
+    <div class="nav-divider"></div>
+    <a href="/foundations/" class="nav-foundations">Foundations</a>
+    <div class="nav-spacer"></div>
+    <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-drawer">
+    <a href="/source/">Source</a>
+    <a href="/components/">Components</a>
+    <a href="/patterns/">Patterns</a>
+    <a href="/lab/" class="active">Lab</a>
+    <a href="/changelog/">Changelog</a>
+    <a href="/foundations/">Foundations</a>
+  </div>
+
+  <div class="case-hero">
+    <div>
+      <div class="breadcrumb" style="margin-bottom: var(--space-md)"><a href="/lab/">Lab</a> / Draft Data</div>
+      <h1 class="case-study-title" style="margin-bottom: var(--space-md)">Real Fake Data Generator</h1>
+      <div class="case-hero__lede">Needed a tool that didn't exist at the right price point. Built it. Learned how to work with AI in the process.</div>
+      <div class="case-hero__props">
+        <span class="case-hero__prop"><strong>Type</strong> Figma Plugin</span>
+        <span class="pill pill-muted">Proof of concept</span>
+      </div>
+    </div>
+    <div class="case-hero__stack">
+      <div class="case-hero__stack-label">Stack</div>
+      <div class="case-hero__stack-items">
+        <div class="case-hero__stack-item">Figma Plugin API</div>
+        <div class="case-hero__stack-item">AI integration</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="overview">Overview</button>
+    <button class="tab" data-tab="design">Design</button>
+  </div>
+
+  <div class="tab-panel active" data-panel="overview">
+    <div class="overview-grid">
+      <div class="overview-cell">
+        <div class="overview-cell__label">The problem</div>
+        <div class="overview-cell__body">Populating Figma tables with realistic fake data is tedious. Free plugins were too basic. Good ones were paywalled. <strong style="color:var(--color-text-primary)">So I built exactly what I needed.</strong></div>
+      </div>
+      <div class="overview-cell">
+        <div class="overview-cell__label">What it does</div>
+        <div class="overview-cell__body">A Figma plugin that <strong style="color:var(--color-text-primary)">rapidly populates table components with AI-generated data.</strong> Focused on fine-tune filters and settings that existing tools skipped.</div>
+      </div>
+      <div class="overview-cell">
+        <div class="overview-cell__label">What I learned</div>
+        <div class="overview-cell__body">Building this showed me that AI can be a powerful tool to get something quickly made and functioning — <strong style="color:var(--color-text-primary)">a practical introduction to integrating AI into my design workflow.</strong></div>
+      </div>
+    </div>
+    <div class="impact-bar">
+      <div class="impact-bar__label">Status</div>
+      <div style="padding: var(--space-sm) 0">
+        <span class="process-note">Local plugin — passing proof of concept. Publishing pending final tweaks.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel" data-panel="design">
+    <div class="screenshot-grid">
+      <div class="screenshot-item">
+        <img src="/assets/images/case-studies/draft-data/rfdg-home.png" alt="Real Fake Data Generator — main plugin home screen">
+      </div>
+      <div class="screenshot-item">
+        <img src="/assets/images/case-studies/draft-data/rfdg-data-types.png" alt="Data type selection — dropdown with grouped data categories">
+      </div>
+      <div class="screenshot-item full-width">
+        <img src="/assets/images/case-studies/draft-data/rfdg-multi-column.png" alt="Multi-column mode — four columns detected and mapped to data types">
+      </div>
+    </div>
+  </div>
+
+  <div class="next-bar">
+    <a href="/lab/pocketgardener/" class="next-bar__link">Next in Lab: PocketGardener →</a>
+  </div>
+
+  <footer class="site-footer container">
+    <span class="site-footer__logo">shawncastillo.com — v3.2</span>
+    <ul class="site-footer__links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+      <li><a href="/foundations/">Foundations</a></li>
+    </ul>
+  </footer>
+
+  <script src="/assets/js/gate.js"></script>
+</body>
+</html>

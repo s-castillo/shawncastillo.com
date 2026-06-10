@@ -1,0 +1,54 @@
+/* tokens.css — Design token layer */
+
+:root {
+  /* Color — Light Mode */
+  --color-accent: #3a7fa8;
+  --color-surface: #f6f8fb;
+  --color-surface-secondary: #edf2f7;
+  --color-surface-elevated: #ffffff;
+  --color-text-primary: #0e1318;
+  --color-text-secondary: #3d5870;
+  --color-text-tertiary: #7a9bb5;
+  --color-border: #d4e0ea;
+
+  /* Typography */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-heading: 'Overpass', sans-serif;
+  --font-editorial: 'DM Serif Display', serif;
+  --font-body: 'Overpass', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 99px;
+
+  /* Motion */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-subtle: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+}
+
+[data-theme="dark"] {
+  --color-accent: #00e5cc;
+  --color-surface: #0e1318;
+  --color-surface-secondary: #161d24;
+  --color-surface-elevated: #1a2330;
+  --color-text-primary: #e0f0fa;
+  --color-text-secondary: #7a9bb5;
+  --color-text-tertiary: #3d5870;
+  --color-border: #1e2d3d;
+}

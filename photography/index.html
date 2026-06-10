@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shawn Castillo — Product and UX Designer. A portfolio built as a design system.">
+  <title>Outside the Brief — shawncastillo.com</title>
+  <script src="/assets/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=DM+Serif+Display:ital@1&family=Overpass:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+  <div class="mode-bar">
+    <span class="mode-bar__label">Dark mode</span>
+    <div class="mode-toggle" role="switch" aria-label="Toggle dark/light mode"></div>
+  </div>
+
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">shawncastillo.com — v3.2</a>
+    <ul class="nav-links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+    </ul>
+    <div class="nav-divider"></div>
+    <a href="/foundations/" class="nav-foundations">Foundations</a>
+    <div class="nav-spacer"></div>
+    <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-drawer">
+    <a href="/source/">Source</a>
+    <a href="/components/">Components</a>
+    <a href="/patterns/">Patterns</a>
+    <a href="/lab/">Lab</a>
+    <a href="/changelog/">Changelog</a>
+    <a href="/foundations/">Foundations</a>
+  </div>
+
+  <div class="page-hero">
+    <div class="breadcrumb" style="margin-bottom: var(--space-md)"><a href="/source/">Source</a> / Photography</div>
+    <h1 class="display" style="font-size: clamp(36px,5vw,52px); margin-bottom: var(--space-md); white-space: nowrap">Outside the brief.</h1>
+    <p style="font-size: 14px; color: var(--color-text-secondary); max-width: 560px; line-height: 1.75">Not client work. Not deliverables. Just curiosity — shot on a dedicated camera across seven categories and counting.</p>
+  </div>
+
+  <!-- Filter bar -->
+  <div class="photo-filter">
+    <button class="filter-tag active" data-category="all">All</button>
+    <button class="filter-tag" data-category="landscape">Landscape</button>
+    <button class="filter-tag" data-category="nature">Nature</button>
+    <button class="filter-tag" data-category="architecture">Architecture</button>
+    <button class="filter-tag" data-category="street">Street</button>
+    <button class="filter-tag" data-category="traveling">Traveling</button>
+    <button class="filter-tag" data-category="rocks">Rocks</button>
+    <button class="filter-tag" data-category="abstract">Abstract</button>
+    <button class="gallery-shuffle" id="gallery-shuffle" title="Shuffle layout">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 3 21 3 21 8"></polyline>
+        <line x1="4" y1="20" x2="21" y2="3"></line>
+        <polyline points="21 16 21 21 16 21"></polyline>
+        <line x1="15" y1="15" x2="21" y2="21"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Gallery — one masonry, grouped by category: Landscape · Nature · Architecture · Street · Traveling · Rocks · Abstract -->
+  <div class="photo-gallery">
+
+    <!-- ── Landscape ── -->
+    <div class="photo-editorial" data-category="landscape">
+      <div class="photo-editorial__eyebrow">Landscape</div>
+      <div class="photo-editorial__quote">"The hardest part about shooting landscape is that the camera never quite captures how small it made you feel standing there."</div>
+      <div class="photo-editorial__meta"><span class="pill pill-muted" style="font-size:10px">Landscape</span></div>
+    </div>
+    <div class="photo-item" data-category="landscape">
+      <img src="/assets/images/photography/landscape/landscape-field-hill-sky-tree.jpg" alt="Lone oak tree in field">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Lone oak tree in field.</span></div>
+    </div>
+    <div class="photo-item" data-category="landscape">
+      <img src="/assets/images/photography/landscape/landscape-lake-mountain-sky-water.jpg" alt="Lake side view with mountains in the background">
+      <div class="photo-overlay"><span class="photo-location">Keystone · April 2021</span><span class="photo-desc">Lake side view with mountains in the background.</span></div>
+    </div>
+    <div class="photo-item" data-category="landscape">
+      <img src="/assets/images/photography/landscape/landscape-mountain-lake-boat-sky.jpg" alt="Lake view from mountain side">
+      <div class="photo-overlay"><span class="photo-location">Keystone · April 2021</span><span class="photo-desc">Lake view from mountain side with mountains in the distance.</span></div>
+    </div>
+    <div class="photo-item" data-category="landscape">
+      <img src="/assets/images/photography/landscape/landscape-mountain-range-field-sky-trees.jpg" alt="View of scattered trees with mountains in the distance">
+      <div class="photo-overlay"><span class="photo-location">Denver · July 2018</span><span class="photo-desc">View of scattered trees with mountains in the distance.</span></div>
+    </div>
+    <div class="photo-item" data-category="landscape">
+      <img src="/assets/images/photography/landscape/landscape-mountain-range-lake-forest-hill.jpg" alt="Lake view from mountain side">
+      <div class="photo-overlay"><span class="photo-location">Keystone · April 2021</span><span class="photo-desc">Lake view from mountain side with mountains in the distance.</span></div>
+    </div>
+    <div class="photo-item" data-category="landscape">
+      <img src="/assets/images/photography/landscape/landscape-mountain-range-treeline-blue-sky.jpg" alt="Mountain range with treeline against blue sky">
+      <div class="photo-overlay"><span class="photo-location">Keystone · April 2021</span><span class="photo-desc">Lake view from mountain side with mountains in the distance.</span></div>
+    </div>
+    <div class="photo-item" data-category="landscape">
+      <img src="/assets/images/photography/landscape/landscape-mountains-trees-water-clear-sky.jpg" alt="Mountains, trees and water under clear sky">
+      <div class="photo-overlay"><span class="photo-location">Keystone · April 2021</span><span class="photo-desc">Lake view from mountain side with mountains in the distance.</span></div>
+    </div>
+    <div class="photo-item" data-category="landscape">
+      <img src="/assets/images/photography/landscape/landscape-person-hat-trail-grass.jpg" alt="View from hilltop overlooking south San Antonio">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2017</span><span class="photo-desc">View from hilltop overlooking south San Antonio.</span></div>
+    </div>
+
+    <!-- ── Nature ── -->
+    <div class="photo-editorial" data-category="nature">
+      <div class="photo-editorial__eyebrow">Nature</div>
+      <div class="photo-editorial__quote">"I'm looking for proof that time passed here. Something so old, so untended, that it became remarkable entirely on its own."</div>
+      <div class="photo-editorial__meta"><span class="pill pill-muted" style="font-size:10px">Nature</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-barn-house-roof-trees.jpg" alt="Abandoned home on a few acres">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Abandoned home on a few acres.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-farmhouse-grass-horse-truck.jpg" alt="Hillside view of small field with passing truck">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Hillside view of small field with passing truck.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-grass-horse-field-sky.jpg" alt="Two horses grazing in field">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Two horses grazing in field.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-horse-field-fence-photo-manipulation.jpg" alt="Two horses grazing in field">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Two horses grazing in field.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-horse-field-pole-fence.jpg" alt="Two horses grazing in field">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Two horses grazing in field.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-horse-grass-fence-tree.jpg" alt="Single horse grazing in field">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Single horse grazing in field.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-horse-grass-field.jpg" alt="Single horse grazing in field">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Single horse grazing in field.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-house-roof-field-tree.jpg" alt="Abandoned home on a few acres">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Abandoned home on a few acres.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-house-rust-roof-tree.jpg" alt="Abandoned home on a few acres">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Abandoned home on a few acres.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-house-yard-trees-sky.jpg" alt="Abandoned home on a few acres">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Abandoned home on a few acres.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-rusted-truck-field.jpg" alt="Rusted and abandoned farm equipment">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Rusted and abandoned farm equipment.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-shack-rural-fence-trees.jpg" alt="Abandoned home on a few acres">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Abandoned home on a few acres.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-tree-horse-field-house.jpg" alt="Single horse hiding behind lone tree">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Single horse hiding behind lone tree.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-tree-sky-trunk-foliage.jpg" alt="Old oak trees with massive limbs">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Old oak trees with massive limbs.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-tree-vine-wheel-rust.jpg" alt="Abandoned wagon wheel against tree">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Abandoned wagon wheel against tree.</span></div>
+    </div>
+    <div class="photo-item" data-category="nature">
+      <img src="/assets/images/photography/nature/nature-yellow-flowers-wildflowers-green-leaves-plants.jpg" alt="Small cluster of yellow flowers">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Small cluster of yellow flowers.</span></div>
+    </div>
+
+    <!-- ── Architecture ── -->
+    <div class="photo-editorial" data-category="architecture">
+      <div class="photo-editorial__eyebrow">Architecture</div>
+      <div class="photo-editorial__quote">"Every building tells you how it was built and how much of the past it was willing to hold onto. I'm there to capture where that boundary between past and present sits — before it shifts again."</div>
+      <div class="photo-editorial__meta"><span class="pill pill-muted" style="font-size:10px">Architecture</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-alleyway-bicycle-tree-sidewalk-staircase.jpg" alt="Corridor at local small business complex with trees">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · September 2016</span><span class="photo-desc">Corridor at local small business complex with trees.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-arch-door-step-bottle.jpg" alt="Ornate doorway and steps with local native tile accents">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · May 2021</span><span class="photo-desc">Ornate doorway and steps with local native tile accents.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-bike-ramp-sidewalk-staircase-building-staircase-street.jpg" alt="Corridor at local small business complex with trees">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · September 2016</span><span class="photo-desc">Corridor at local small business complex with trees.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-brick-sign-outside-building.jpg" alt="Sign hanging in corridor of local small business complex">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · September 2016</span><span class="photo-desc">Sign hanging in corridor of local small business complex.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-brick-wall-paint-peeling-street-light.jpg" alt="Interesting wear on brick wall">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · September 2016</span><span class="photo-desc">Interesting wear on brick wall in corridor of local small business complex.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-building-abandoned-paint-deteriorated.jpg" alt="Abandoned small business strip">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · June 2016</span><span class="photo-desc">Abandoned small business strip — would later become a parking lot.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-building-front-daytime-tree.jpg" alt="Local small business in historic area of town">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · October 2024</span><span class="photo-desc">Local small business in historic area of town.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-building-sign-storefront-abandoned-urban.jpg" alt="Local business moves locations">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2018</span><span class="photo-desc">Local business moves locations.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-fence-stairs-tree-balcony.jpg" alt="Corridor at local small business complex with trees">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · September 2016</span><span class="photo-desc">Corridor at local small business complex with trees.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-grain-silo-tower-building-sign.jpg" alt="Pioneer Flour Company Towers">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2018</span><span class="photo-desc">Pioneer Flour Company Towers.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-hotel-sign-rooftop-building-night.jpg" alt="Robt. E. Lee Hotel in early evening">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · December 2021</span><span class="photo-desc">Robt. E. Lee Hotel in early evening.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-light-street-lamp-night-brick-wall.jpg" alt="Brick wall in corridor at night">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · September 2016</span><span class="photo-desc">Brick wall in corridor of local small business complex at night.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-pioneer-flour-mill-tower-sign-night.jpg" alt="Pioneer Flour Company Towers">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2018</span><span class="photo-desc">Pioneer Flour Company Towers.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-sculpture-cars-sky-street.jpg" alt="Friendship monument in downtown San Antonio">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · April 2018</span><span class="photo-desc">Friendship monument in downtown San Antonio.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-skyscraper-building-glass-blue.jpg" alt="Frost Bank Building">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · December 2021</span><span class="photo-desc">Frost Bank Building.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-skyscraper-clock-tower-cityscape-blue.png" alt="Frost Bank Building">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · December 2021</span><span class="photo-desc">Frost Bank Building.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-staircase-fence-walkway-railings-trees.jpg" alt="Corridor at local small business complex with trees">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · September 2016</span><span class="photo-desc">Corridor at local small business complex with trees.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-store-building-outdoor-setting.jpg" alt="Abandoned warehouse near downtown San Antonio">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · June 2016</span><span class="photo-desc">Abandoned warehouse near downtown San Antonio.</span></div>
+    </div>
+    <div class="photo-item" data-category="architecture">
+      <img src="/assets/images/photography/architecture/architecture-wall-brick-light-fixture-pole.jpg" alt="Interesting wear on brick wall">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · September 2016</span><span class="photo-desc">Interesting wear on brick wall in corridor of local small business complex.</span></div>
+    </div>
+
+    <!-- ── Street ── -->
+    <div class="photo-editorial" data-category="street">
+      <div class="photo-editorial__eyebrow">Street</div>
+      <div class="photo-editorial__quote">"The skill it takes to produce this kind of work — in the places it ends up — deserves to be documented before it disappears."</div>
+      <div class="photo-editorial__meta"><span class="pill pill-muted" style="font-size:10px">Street</span></div>
+    </div>
+    <div class="photo-item" data-category="street">
+      <img src="/assets/images/photography/street/street-grafiti-brick-wall-cartoon.jpg" alt="Cinder block wall on random street">
+      <div class="photo-overlay"><span class="photo-location">Denver · August 2020</span><span class="photo-desc">Cinder block wall on random street.</span></div>
+    </div>
+    <div class="photo-item" data-category="street">
+      <img src="/assets/images/photography/street/street-graffiti-wall-colorful-text.jpg" alt="Random wall walking around">
+      <div class="photo-overlay"><span class="photo-location">Florida · November 2017</span><span class="photo-desc">Random wall walking around.</span></div>
+    </div>
+    <div class="photo-item" data-category="street">
+      <img src="/assets/images/photography/street/street-mural-street-door-graffiti.jpg" alt="Back alley door to local small business">
+      <div class="photo-overlay"><span class="photo-location">Denver · August 2020</span><span class="photo-desc">Back alley door to local small business.</span></div>
+    </div>
+    <div class="photo-item" data-category="street">
+      <img src="/assets/images/photography/street/street-wall-mural-graffiti-bright.jpg" alt="Random wall walking around">
+      <div class="photo-overlay"><span class="photo-location">Denver · August 2020</span><span class="photo-desc">Random wall walking around.</span></div>
+    </div>
+
+    <!-- ── Traveling ── -->
+    <div class="photo-editorial" data-category="traveling">
+      <div class="photo-editorial__eyebrow">Traveling</div>
+      <div class="photo-editorial__quote">"The camera comes along for the day, not the other way around. When something stops me, it's because I know I'll want to look at that exact moment again someday — just as it was, not how I remember it."</div>
+      <div class="photo-editorial__meta"><span class="pill pill-muted" style="font-size:10px">Traveling</span></div>
+    </div>
+    <div class="photo-item" data-category="traveling">
+      <img src="/assets/images/photography/traveling/traveling-crowd-people-building-night.jpg" alt="Community Event for Chinese New Year">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2023</span><span class="photo-desc">Community Event for Chinese New Year.</span></div>
+    </div>
+    <div class="photo-item" data-category="traveling">
+      <img src="/assets/images/photography/traveling/traveling-festival-evening-people-event.jpg" alt="Community Event for Chinese New Year">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2023</span><span class="photo-desc">Community Event for Chinese New Year.</span></div>
+    </div>
+    <div class="photo-item" data-category="traveling">
+      <img src="/assets/images/photography/traveling/traveling-jeep-tree-house-street.jpg" alt="Vintage Jeep found in the neighborhood">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2021</span><span class="photo-desc">Vintage Jeep found in the neighborhood.</span></div>
+    </div>
+    <div class="photo-item" data-category="traveling">
+      <img src="/assets/images/photography/traveling/traveling-road-sign-cars-buildings.jpg" alt="Outskirts of Denver on random street">
+      <div class="photo-overlay"><span class="photo-location">Denver · August 2020</span><span class="photo-desc">Outskirts of Denver on random street.</span></div>
+    </div>
+    <div class="photo-item" data-category="traveling">
+      <img src="/assets/images/photography/traveling/traveling-shelf-books-radio-trophies-truck-stereo.jpg" alt="Thrift shop shelves">
+      <div class="photo-overlay"><span class="photo-location">Denver · June 2018</span><span class="photo-desc">Thrift shop shelves.</span></div>
+    </div>
+    <div class="photo-item" data-category="traveling">
+      <img src="/assets/images/photography/traveling/traveling-wall-building-tiles-pots.jpg" alt="Brick wall to small local business">
+      <div class="photo-overlay"><span class="photo-location">Denver · August 2020</span><span class="photo-desc">Brick wall to small local business.</span></div>
+    </div>
+
+    <!-- ── Rocks ── -->
+    <div class="photo-editorial" data-category="rocks">
+      <div class="photo-editorial__eyebrow">Rocks</div>
+      <div class="photo-editorial__quote">"It's never really about the rock. It's about what the rock is doing with light, color, and texture in that exact moment. The composition was always there — I just found it."</div>
+      <div class="photo-editorial__meta"><span class="pill pill-muted" style="font-size:10px">Rocks</span></div>
+    </div>
+    <div class="photo-item" data-category="rocks">
+      <img src="/assets/images/photography/rocks/rocks-moss-rock-lichen.jpg" alt="Random rock formation with lichen">
+      <div class="photo-overlay"><span class="photo-location">Sabinal · September 2017</span><span class="photo-desc">Random rock formation with lichen.</span></div>
+    </div>
+    <div class="photo-item" data-category="rocks">
+      <img src="/assets/images/photography/rocks/rocks-rock-crack-grass-concrete.jpg" alt="Random rock formation with lichen">
+      <div class="photo-overlay"><span class="photo-location">Sabinal · September 2017</span><span class="photo-desc">Random rock formation with lichen.</span></div>
+    </div>
+    <div class="photo-item" data-category="rocks">
+      <img src="/assets/images/photography/rocks/rocks-rock-green-moss-red-lichen-gray-stone.jpg" alt="Random rock formation with lichen">
+      <div class="photo-overlay"><span class="photo-location">Sabinal · September 2017</span><span class="photo-desc">Random rock formation with lichen.</span></div>
+    </div>
+    <div class="photo-item" data-category="rocks">
+      <img src="/assets/images/photography/rocks/rocks-rock-lichen-grass-moss.jpg" alt="Random rock formation with lichen">
+      <div class="photo-overlay"><span class="photo-location">Sabinal · September 2017</span><span class="photo-desc">Random rock formation with lichen.</span></div>
+    </div>
+    <div class="photo-item" data-category="rocks">
+      <img src="/assets/images/photography/rocks/rocks-rock-lichen-moss-outdoors.png" alt="Random rock formation with lichen">
+      <div class="photo-overlay"><span class="photo-location">Sabinal · September 2017</span><span class="photo-desc">Random rock formation with lichen.</span></div>
+    </div>
+    <div class="photo-item" data-category="rocks">
+      <img src="/assets/images/photography/rocks/rocks-rock-moss-lichen-red.jpg" alt="Random rock formation with lichen">
+      <div class="photo-overlay"><span class="photo-location">Sabinal · September 2017</span><span class="photo-desc">Random rock formation with lichen.</span></div>
+    </div>
+    <div class="photo-item" data-category="rocks">
+      <img src="/assets/images/photography/rocks/rocks-rock-patterned-gray.jpg" alt="Random rock formation with lichen">
+      <div class="photo-overlay"><span class="photo-location">Sabinal · September 2017</span><span class="photo-desc">Random rock formation with lichen.</span></div>
+    </div>
+    <div class="photo-item" data-category="rocks">
+      <img src="/assets/images/photography/rocks/rocks-stone-lichen-rock-outdoor.jpg" alt="Random rock formation with lichen">
+      <div class="photo-overlay"><span class="photo-location">Sabinal · September 2017</span><span class="photo-desc">Random rock formation with lichen.</span></div>
+    </div>
+
+    <!-- ── Abstract ── -->
+    <div class="photo-editorial" data-category="abstract">
+      <div class="photo-editorial__eyebrow">Abstract</div>
+      <div class="photo-editorial__quote">"I wanted to know what I'd find if I looked close enough. Turns out the most ordinary things have the most unexpected detail — you just have to be willing to look from a completely different angle."</div>
+      <div class="photo-editorial__meta"><span class="pill pill-muted" style="font-size:10px">Abstract</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/abstract/abstract-board-sign-sticker-graphic.jpg" alt="Back wall with stickers from local neighborhood bar">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · July 2017</span><span class="photo-desc">Back wall with stickers from local neighborhood bar.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/abstract/abstract-garage-stuff-storage-items-shelves.jpg" alt="Friends garage at night with overhead lighting">
+      <div class="photo-overlay"><span class="photo-location">Houston · December 2017</span><span class="photo-desc">Friends garage at night with overhead lighting.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_00_00_999.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_00_57_480.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_01_00_884.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_01_11_277.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_02_54_360.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_03_40_447.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_04_10_220.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_07_50_598.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_08_00_420.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_09_59_876.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_10_18_873.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_00_10_51_247.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+    <div class="photo-item" data-category="abstract">
+      <img src="/assets/images/photography/microscope/2022_01_10_14_00_16_363.png" alt="Closeup of US Currency">
+      <div class="photo-overlay"><span class="photo-location">San Antonio · January 2022</span><span class="photo-desc">Closeup of US Currency.</span></div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer container">
+    <span class="site-footer__logo">shawncastillo.com — v3.2</span>
+    <ul class="site-footer__links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+      <li><a href="/foundations/">Foundations</a></li>
+    </ul>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <button class="lightbox__nav lightbox__prev" id="lightbox-prev" aria-label="Previous">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="lightbox__nav lightbox__next" id="lightbox-next" aria-label="Next">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+    <div class="lightbox__stage">
+      <div class="lightbox__img-wrap">
+        <img class="lightbox__img" id="lightbox-img" src="" alt="">
+        <div class="lightbox__meta">
+          <span class="lightbox__location" id="lightbox-location"></span>
+          <span class="lightbox__desc" id="lightbox-desc"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shawn Castillo — Product and UX Designer. A portfolio built as a design system.">
+  <title>Patterns — shawncastillo.com</title>
+  <script src="/assets/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=DM+Serif+Display:ital@1&family=Overpass:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <style>
+    .patterns-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      padding-bottom: var(--space-3xl);
+    }
+    @media (max-width: 767px) { .patterns-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="mode-bar">
+    <span class="mode-bar__label">Dark mode</span>
+    <div class="mode-toggle" role="switch" aria-label="Toggle dark/light mode"></div>
+  </div>
+
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">shawncastillo.com — v3.2</a>
+    <ul class="nav-links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/" class="active">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+    </ul>
+    <div class="nav-divider"></div>
+    <a href="/foundations/" class="nav-foundations">Foundations</a>
+    <div class="nav-spacer"></div>
+    <button class="nav-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav-drawer">
+    <a href="/source/">Source</a>
+    <a href="/components/">Components</a>
+    <a href="/patterns/" class="active">Patterns</a>
+    <a href="/lab/">Lab</a>
+    <a href="/changelog/">Changelog</a>
+    <a href="/foundations/">Foundations</a>
+  </div>
+
+  <div class="page-hero">
+    <h1 class="display" style="font-size: clamp(36px,5vw,52px); margin-bottom: var(--space-md)">Applied work.</h1>
+    <p style="font-size: 14px; color: var(--color-text-secondary); max-width: 480px; line-height: 1.75">Real clients, real briefs, real constraints. Different context, same approach.</p>
+  </div>
+
+  <div class="container">
+    <div class="patterns-grid">
+      <a href="/patterns/hair-salon/" class="card">
+        <div class="card-preview preview-patterns">
+          <span class="card-preview__abbr">HS</span>
+          <span class="card-preview__badge pill pill-muted">In progress</span>
+        </div>
+        <div class="card-body">
+          <div class="card-breadcrumb">Patterns / Freelance</div>
+          <div class="card-title">Hair Salon Studio Website</div>
+          <div class="card-lede">The salon had no online presence — no way for new clients to find them, no central place for existing ones to connect. This site changes that.</div>
+          <div class="card-footer">
+            <span class="pill pill-muted">In progress</span>
+            <span class="card-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <div class="card-placeholder">more patterns incoming</div>
+    </div>
+  </div>
+
+  <footer class="site-footer container">
+    <span class="site-footer__logo">shawncastillo.com — v3.2</span>
+    <ul class="site-footer__links">
+      <li><a href="/source/">Source</a></li>
+      <li><a href="/components/">Components</a></li>
+      <li><a href="/patterns/">Patterns</a></li>
+      <li><a href="/lab/">Lab</a></li>
+      <li><a href="/changelog/">Changelog</a></li>
+      <li><a href="/foundations/">Foundations</a></li>
+    </ul>
+  </footer>
+
+  <script src="/assets/js/gate.js"></script>
+</body>
+</html>
