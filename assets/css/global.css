@@ -54,9 +54,8 @@ button {
 
 /* Mode bar */
 .mode-bar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: relative;
+  z-index: 90;
   background: var(--color-surface-secondary);
   border-bottom: 0.5px solid var(--color-border);
   padding: 8px var(--space-xl);
@@ -111,13 +110,14 @@ button {
 .site-nav {
   background: var(--color-surface);
   border-bottom: 0.5px solid var(--color-border);
-  padding: 14px var(--space-xl);
+  padding: 14px max(var(--space-xl), calc((100% - 1100px) / 2));
   display: flex;
   align-items: center;
   gap: var(--space-lg);
   transition: background var(--duration-base) var(--ease-subtle);
-  position: relative;
-  z-index: 90;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-logo {
@@ -335,13 +335,24 @@ h2.section-title {
 
 /* Footer */
 .site-footer {
-  border-top: 0.5px solid var(--color-border);
+  position: relative;
   padding: var(--space-xl);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
   flex-wrap: wrap;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 0.5px;
+  background: var(--color-border);
 }
 
 .site-footer__logo {

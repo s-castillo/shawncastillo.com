@@ -178,9 +178,22 @@
 .stat-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 0.5px solid var(--color-border);
-  border-bottom: 0.5px solid var(--color-border);
+  padding: 0 max(var(--space-xl), calc((100% - 1100px) / 2));
+  position: relative;
 }
+
+.stat-strip::before,
+.stat-strip::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.5px;
+  background: var(--color-border);
+}
+
+.stat-strip::before { top: 0; }
+.stat-strip::after  { bottom: 0; }
 
 .stat-card {
   padding: var(--space-lg) var(--space-xl);
@@ -217,7 +230,7 @@
 .tabs {
   display: flex;
   border-bottom: 0.5px solid var(--color-border);
-  padding: 0 var(--space-xl);
+  padding: 0 max(var(--space-xl), calc((100% - 1100px) / 2));
   background: var(--color-surface);
   position: sticky;
   top: 62px;
@@ -258,7 +271,7 @@
 /* ── Impact bar ── */
 .impact-bar {
   background: var(--color-surface-secondary);
-  padding: var(--space-lg) var(--space-xl);
+  padding: var(--space-lg) max(var(--space-xl), calc((100% - 1100px) / 2));
   border-top: 0.5px solid var(--color-border);
 }
 
@@ -305,6 +318,8 @@
   flex-direction: column;
   gap: 1px;
   background: var(--color-border);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .process-step {
@@ -355,6 +370,8 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
   padding: var(--space-xl);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .screenshot-item {
@@ -405,7 +422,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-3xl) var(--space-xl);
+  padding: var(--space-3xl) max(var(--space-xl), calc((100% - 1100px) / 2));
   gap: var(--space-lg);
 }
 
@@ -534,11 +551,22 @@
 
 /* ── Next bar ── */
 .next-bar {
-  border-top: 0.5px solid var(--color-border);
-  padding: var(--space-lg) var(--space-xl);
+  position: relative;
+  padding: var(--space-lg) max(var(--space-xl), calc((100% - 1100px) / 2));
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.next-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 0.5px;
+  background: var(--color-border);
 }
 
 .next-bar__link {
@@ -636,6 +664,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--color-border);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .overview-grid.two-col {
