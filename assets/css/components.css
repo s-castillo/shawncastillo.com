@@ -878,7 +878,7 @@
   border-bottom: 0.5px solid var(--color-border);
   flex-wrap: wrap;
   position: sticky;
-  top: 62px;
+  top: 48px;
   background: var(--color-surface);
   z-index: 70;
 }
