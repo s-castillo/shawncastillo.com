@@ -3,3 +3,5 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/j4v23eek323v/public_html/
     - /bin/cp -Rf . $DEPLOYPATH
+    - find $DEPLOYPATH -type f -exec chmod 644 {} \;
+    - find $DEPLOYPATH -type d -exec chmod 755 {} \;
