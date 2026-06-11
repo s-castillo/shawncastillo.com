@@ -13,7 +13,8 @@
       item.style.display = match ? 'block' : 'none';
     });
     editorials.forEach(card => {
-      const match = cat === 'all' || card.dataset.category === cat;
+      // Only show editorial cards when a specific category is active
+      const match = cat !== 'all' && card.dataset.category === cat;
       card.style.display = match ? 'block' : 'none';
     });
   }
