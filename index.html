@@ -110,6 +110,27 @@
       color: var(--color-accent);
     }
 
+    .hero-panel-label {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: var(--space-sm);
+    }
+
+    .hero-panel-label__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .hero-panel-label__desc {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+      line-height: 1.5;
+    }
+
     @media (max-width: 767px) {
       .landing-hero {
         grid-template-columns: 1fr;
@@ -199,6 +220,10 @@
 
     <div class="tok-outline" style="position:relative">
       <span class="tok-tag">token-panel · --color-surface-secondary · --radius-lg</span>
+      <div class="hero-panel-label">
+        <span class="hero-panel-label__eyebrow">↳ Foundations sample</span>
+        <span class="hero-panel-label__desc">Color, type, and spacing tokens powering this page</span>
+      </div>
       <div class="token-panel">
         <div class="token-panel__header">
           <span class="token-panel__label">Tokens</span>
