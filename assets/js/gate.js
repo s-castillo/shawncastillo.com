@@ -27,6 +27,55 @@ document.addEventListener('DOMContentLoaded', function () {
     stage1.insertBefore(emailRow, requestBtn);
   }
 
+  // Inject "already have a code?" link + inline code entry into stage 1
+  if (stage1) {
+    const alreadyLink = document.createElement('button');
+    alreadyLink.className = 'gate__already-link';
+    alreadyLink.textContent = 'Already have a code?';
+    stage1.appendChild(alreadyLink);
+
+    const inlineCodeSection = document.createElement('div');
+    inlineCodeSection.className = 'gate__code-section gate__inline-code';
+    inlineCodeSection.style.display = 'none';
+    inlineCodeSection.innerHTML = `
+      <div class="gate__input-row">
+        <input class="gate__input gate__inline-input" type="text" placeholder="Enter passcode" autocomplete="off">
+        <button class="gate__unlock-btn gate__inline-unlock">Unlock</button>
+      </div>
+      <div class="gate__error gate__inline-error">Incorrect code. Try again.</div>
+    `;
+    stage1.appendChild(inlineCodeSection);
+
+    alreadyLink.addEventListener('click', function () {
+      inlineCodeSection.style.display = 'flex';
+      alreadyLink.style.display = 'none';
+    });
+
+    const inlineInput = inlineCodeSection.querySelector('.gate__inline-input');
+    const inlineUnlock = inlineCodeSection.querySelector('.gate__inline-unlock');
+    const inlineError = inlineCodeSection.querySelector('.gate__inline-error');
+
+    function attemptInlineUnlock() {
+      const entered = inlineInput.value.trim().toUpperCase();
+      if (entered === correctCode.toUpperCase()) {
+        gate.style.display = 'none';
+        if (content) content.style.display = 'block';
+        const activeTab = document.querySelector('.tab.active .tab-lock');
+        if (activeTab) activeTab.style.display = 'none';
+      } else {
+        inlineInput.classList.add('error');
+        inlineError.classList.add('visible');
+      }
+    }
+
+    inlineUnlock.addEventListener('click', attemptInlineUnlock);
+    inlineInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') attemptInlineUnlock();
+      inlineInput.classList.remove('error');
+      inlineError.classList.remove('visible');
+    });
+  }
+
   if (requestBtn && stage2) {
     requestBtn.addEventListener('click', function () {
       const emailInput = stage1.querySelector('.gate__email-input');

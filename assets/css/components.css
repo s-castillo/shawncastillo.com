@@ -472,6 +472,19 @@
 
 .gate__back:hover { color: var(--color-text-secondary); }
 
+.gate__already-link {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-family: var(--font-base);
+}
+
+.gate__already-link:hover { color: var(--color-text-secondary); }
+
 .gate__input-row {
   display: flex;
   gap: var(--space-sm);
